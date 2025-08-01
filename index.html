@@ -61,6 +61,7 @@
       border-radius: 20px;
       box-shadow: 0 0 25px rgba(0,0,0,0.2);
       animation: bounceIn 1s ease-out;
+      position: relative;
     }
     .surprise-content .message {
       color: #d6336c;
@@ -73,6 +74,24 @@
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(0,0,0,0.3);
       animation: float 3s ease-in-out infinite;
+    }
+    .decor-img {
+      position: absolute;
+      width: 80px;
+      animation: fadeIn 2s ease forwards;
+    }
+    .decor-top-left {
+      top: -30px;
+      left: -30px;
+    }
+    .decor-bottom-right {
+      bottom: -30px;
+      right: -30px;
+    }
+    .cat-img {
+      width: 100px;
+      margin-top: 20px;
+      animation: bounceIn 2s ease;
     }
     .balloons {
       position: absolute;
@@ -146,8 +165,11 @@
   <button class="btn" onclick="revealSurprise()">Click for a Surprise!</button>
   <div class="hidden" id="surprise">
     <div class="surprise-content">
-      <p class="message">Happyyy birthdayy!Hehe :> sorry for not messaging. Anyways a moment of joy that my baby turned 17 :DD.Malaysia te Bday is a great thing. I hope you enjoying your trip.Again happiest birthday my love. Wish you a great life ahead (hope we can marry).Also I love youuuuuuuuuu!:3. Have fun!!💫(If any mistakes are found pls forgive me ) </p>
+      <img src="decorate.png" class="decor-img decor-top-left" alt="Decor">
+      <img src="decorate_flower.png" class="decor-img decor-bottom-right" alt="Flower Decor">
+      <p class="message"> Happyyy birthdayy!Hehe :> sorry for not messaging. Anyways a moment of joy that my baby turned 17 :DD.Malaysia te Bday is a great experience. I hope you are enjoying your trip. Again Happiest Birthday my love. Wish you a great life ahead (hope we can marry).Also I love youuuuuuuuuu!:3. Have fun!!💫(If any mistakes are found pls forgive me )💫</p>
       <img class="main-img" src="https://images.unsplash.com/photo-1589646023725-5ac2ba5fcf71?auto=format&fit=crop&w=800&q=80" alt="Birthday Celebration">
+      <img class="cat-img" src="mewmew.gif" alt="Cute Cat">
     </div>
   </div>
   <script>
