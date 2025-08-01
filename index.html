@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Nazifa!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #ffe4ec, #fad0c4);
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 4em;
+      margin: 0.2em 0;
+      animation: burstIn 1.5s ease-out;
+      color: #fff9f9;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    .message {
+      font-size: 1.6em;
+      margin: 0.5em 0;
+      animation: fadeInUp 1.8s ease-in;
+      max-width: 90%;
+    }
+    .btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: fadeInUp 2.2s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(to right, #ff5e78, #ff3f81);
+    }
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .surprise-content {
+      background: #ffe6ec;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+      animation: bounceIn 1s ease-out;
+    }
+    .surprise-content .message {
+      color: #d6336c;
+      font-weight: bold;
+      animation: heartBeat 2s ease infinite;
+    }
+    img.main-img {
+      width: 320px;
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+    .balloons {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      animation: float 4s ease-in-out infinite;
+    }
+    .balloons img {
+      width: 60px;
+      height: auto;
+      animation: float 2.5s ease-in-out infinite;
+    }
+    .confetti {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://i.ibb.co/sb1XQDH/confetti.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.6;
+    }
+    audio {
+      display: none;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes burstIn {
+      0% { opacity: 0; transform: scale(0.3) rotate(-45deg); }
+      60% { transform: scale(1.2) rotate(10deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0); }
+    }
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.05); }
+      50% { transform: scale(0.95); }
+      75% { transform: scale(1.05); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      80% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/zf30rq8d0uymb2wbun9rk/My-Love.mp3?rlkey=8vxc21r90ld6ik9tk7tzw54oq&dl=0" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="confetti"></div>
+  <div class="balloons">
+    <img src="balloon1.png" alt="Balloon 1">
+    <img src="balloon2.png" alt="Balloon 2">
+  </div>
+  <h1>🎉 Happy Birthday, Nazifa! 🎂</h1>
+  <p class="message">Celebrating you on this special day – August 02 💖</p>
+  <p class="message">Wishing you joy, love, and laughter today and always.</p>
+  <button class="btn" onclick="revealSurprise()">Click for a Surprise!</button>
+  <div class="hidden" id="surprise">
+    <div class="surprise-content">
+      <p class="message">You are amazing, Nazifa, and you deserve the best! 💫</p>
+      <img class="main-img" src="https://images.unsplash.com/photo-1589646023725-5ac2ba5fcf71?auto=format&fit=crop&w=800&q=80" alt="Birthday Celebration">
+    </div>
+  </div>
+  <script>
+    function revealSurprise() {
+      document.getElementById('surprise').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
